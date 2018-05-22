@@ -1,0 +1,28 @@
+<h1>Player List</h1>
+
+<p>This component fetching player list from the server.</p>
+
+<p *ngIf="!playerList"><em>Loading...</em></p>
+
+<table class='table' *ngIf="playerList">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>totalBets</th>
+            <th>totalBetsWon</th>
+            <th>totalBetsLost</th>
+            <th>amountWon</th>
+            <th>amountLost</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of playerList">
+            <td>{{ p.name}}</td>
+            <td>{{ p.totalBets }}</td>
+            <td>{{ p.totalBetsWon}}</td>
+            <td>{{ p.totalBetsLost }}</td>
+            <td>{{ p.amountWon}}</td>
+            <td>{{ p.amountLost }}</td>
+        </tr>
+    </tbody>
+</table>

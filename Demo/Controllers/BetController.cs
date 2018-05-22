@@ -10,7 +10,7 @@ namespace Demo.Controllers
     public class BetController : Controller
     {
         private readonly IBetRepository _betRepository;
-        protected BetController(IBetRepository betRepository)
+        public BetController(IBetRepository betRepository)
         {
             _betRepository = betRepository;
         }

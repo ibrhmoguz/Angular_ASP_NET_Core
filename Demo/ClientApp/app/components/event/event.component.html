@@ -1,0 +1,34 @@
+<h1>Create Event</h1>
+
+<p>Create event</p>
+
+<form [formGroup]="eventForm" (ngSubmit)="onAddEvent()">
+    <div class="form-group">
+        <label for="kickOffTime">Kick-off Time</label>
+        <input id="kickOffTime" formControlName="kickOffTime" class="form-control" type="text" />
+    </div>
+    <div class="form-group">
+        <label for="homeTeam">Home Team</label>
+        <input id="homeTeam" formControlName="homeTeam" class="form-control" type="text" />
+    </div>
+    <div class="form-group">
+        <label for="awayTeam">Away Team</label>
+        <input id="awayTeam" formControlName="awayTeam" class="form-control" type="text" />
+    </div>
+    <div class="form-group">
+        <label for="homeOdds">Home Odds</label>
+        <input id="homeOdds" formControlName="homeOdds" class="form-control" type="number" />
+    </div>
+    <div class="form-group">
+        <label for="awayOdds">Away Odds</label>
+        <input id="awayOdds" formControlName="awayOdds" class="form-control" type="number" />
+    </div>
+    <div class="form-group">
+        <label for="drawOdds">Draw Odds</label>
+        <input id="drawOdds" formControlName="drawOdds" class="form-control" type="number" />
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-danger">Cancel</button>
+        <button type="submit" class="btn btn-success">Add Event</button>
+    </div>
+</form>

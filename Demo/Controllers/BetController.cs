@@ -20,5 +20,17 @@ namespace Demo.Controllers
         {
             return this._betRepository.GetPlayerListWithStatistics();
         }
+
+        [HttpPost("createBet")]
+        public int CreateBet([FromBody] Bet bet)
+        {
+            return this._betRepository.AddUpdateBet(bet);
+        }
+
+        [HttpPost("createEvent")]
+        public int CreateEvent([FromBody] Event e)
+        {
+            return this._betRepository.AddUpdateEvent(e);
+        }
     }
 }

@@ -38,5 +38,15 @@ namespace Demo.Repository
                              };
             return playerList.ToList();
         }
+
+        public int AddUpdateBet(Bet bet)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int AddUpdateEvent(Event e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

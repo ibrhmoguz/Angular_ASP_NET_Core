@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, RequestOptions } from '@angular/http';
+import { Http } from '@angular/http';
 import 'rxjs/Rx';
 
 @Injectable()
@@ -13,14 +13,15 @@ export class BetService {
 
     addEvent(event: Event) {
         console.log(event);
-        this.http.post('api/bet/createEvent', event).map(res => res.json());
+        this.http.post('api/bet/createEvent', event).subscribe();
     }
 }
 
 export interface Event {
-    kickOffTime: string;
-    homeTeam: string;
-    awayTeam: string;
+    EventId: number,
+    KickOffTime: string;
+    HomeTeam: string;
+    AwayTeam: string;
     homeOdds: number;
     awayOdds: number;
     drawOdds: number;

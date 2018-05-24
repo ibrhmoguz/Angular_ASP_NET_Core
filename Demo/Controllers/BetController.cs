@@ -28,7 +28,7 @@ namespace Demo.Controllers
         }
 
         [HttpPost("createEvent")]
-        public int CreateEvent([FromBody] Event e)
+        public int CreateEvent(Event e)
         {
             return this._betRepository.AddUpdateEvent(e);
         }

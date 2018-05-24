@@ -10,16 +10,18 @@ import { BetService } from '../../services/bet.service';
 export class EventComponent implements OnInit {
     eventForm: FormGroup;
 
-    constructor(private service: BetService) { }
+    constructor(private service: BetService) {
+    }
 
     ngOnInit() {
         this.eventForm = new FormGroup({
-            'kickOffTime': new FormControl(''),
-            'homeTeam': new FormControl(''),
-            'awayTeam': new FormControl(''),
-            'homeOdds': new FormControl(''),
-            'awayOdds': new FormControl(''),
-            'drawOdds': new FormControl('')
+            'EventId': new FormControl(''),
+            'KickOffTime': new FormControl(''),
+            'HomeTeam': new FormControl(''),
+            'AwayTeam': new FormControl(''),
+            'HomeOdds': new FormControl(''),
+            'AwayOdds': new FormControl(''),
+            'DrawOdds': new FormControl('')
         });
     }
 
